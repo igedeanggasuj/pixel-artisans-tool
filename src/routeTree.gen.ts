@@ -11,7 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangRouteImport } from './routes/$lang'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
+import { Route as LangAboutRouteImport } from './routes/$lang/about'
+import { Route as LangCompanyProfileRouteImport } from './routes/$lang/company-profile'
+import { Route as LangContactRouteImport } from './routes/$lang/contact'
+import { Route as LangHseQualityRouteImport } from './routes/$lang/hse-quality'
+import { Route as LangIndustriesRouteImport } from './routes/$lang/industries'
+import { Route as LangPrivacyPolicyRouteImport } from './routes/$lang/privacy-policy'
 import { Route as LangQuoteRouteImport } from './routes/$lang/quote'
 import { Route as LangProjectsIndexRouteImport } from './routes/$lang/projects.index'
 import { Route as LangProjectsSlugRouteImport } from './routes/$lang/projects.$slug'
@@ -28,9 +35,44 @@ const LangRoute = LangRouteImport.update({
   path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LangIndexRoute = LangIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCompanyProfileRoute = LangCompanyProfileRouteImport.update({
+  id: '/company-profile',
+  path: '/company-profile',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangContactRoute = LangContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangHseQualityRoute = LangHseQualityRouteImport.update({
+  id: '/hse-quality',
+  path: '/hse-quality',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangIndustriesRoute = LangIndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangPrivacyPolicyRoute = LangPrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => LangRoute,
 } as any)
 const LangQuoteRoute = LangQuoteRouteImport.update({
@@ -62,6 +104,13 @@ const LangServicesSlugRoute = LangServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/company-profile': typeof LangCompanyProfileRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/hse-quality': typeof LangHseQualityRoute
+  '/$lang/industries': typeof LangIndustriesRoute
+  '/$lang/privacy-policy': typeof LangPrivacyPolicyRoute
   '/$lang/quote': typeof LangQuoteRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/projects/$slug': typeof LangProjectsSlugRoute
@@ -71,6 +120,13 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/company-profile': typeof LangCompanyProfileRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/hse-quality': typeof LangHseQualityRoute
+  '/$lang/industries': typeof LangIndustriesRoute
+  '/$lang/privacy-policy': typeof LangPrivacyPolicyRoute
   '/$lang/quote': typeof LangQuoteRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/projects/$slug': typeof LangProjectsSlugRoute
@@ -82,6 +138,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/company-profile': typeof LangCompanyProfileRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/hse-quality': typeof LangHseQualityRoute
+  '/$lang/industries': typeof LangIndustriesRoute
+  '/$lang/privacy-policy': typeof LangPrivacyPolicyRoute
   '/$lang/quote': typeof LangQuoteRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/projects/$slug': typeof LangProjectsSlugRoute
@@ -94,6 +157,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$lang'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/company-profile'
+    | '/$lang/contact'
+    | '/$lang/hse-quality'
+    | '/$lang/industries'
+    | '/$lang/privacy-policy'
     | '/$lang/quote'
     | '/$lang/'
     | '/$lang/projects/$slug'
@@ -103,6 +173,13 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/company-profile'
+    | '/$lang/contact'
+    | '/$lang/hse-quality'
+    | '/$lang/industries'
+    | '/$lang/privacy-policy'
     | '/$lang/quote'
     | '/$lang'
     | '/$lang/projects/$slug'
@@ -113,6 +190,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$lang'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/company-profile'
+    | '/$lang/contact'
+    | '/$lang/hse-quality'
+    | '/$lang/industries'
+    | '/$lang/privacy-policy'
     | '/$lang/quote'
     | '/$lang/'
     | '/$lang/projects/$slug'
@@ -124,6 +208,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LangRoute: typeof LangRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -142,11 +227,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$lang/': {
       id: '/$lang/'
       path: '/'
       fullPath: '/$lang/'
       preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/company-profile': {
+      id: '/$lang/company-profile'
+      path: '/company-profile'
+      fullPath: '/$lang/company-profile'
+      preLoaderRoute: typeof LangCompanyProfileRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/contact': {
+      id: '/$lang/contact'
+      path: '/contact'
+      fullPath: '/$lang/contact'
+      preLoaderRoute: typeof LangContactRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/hse-quality': {
+      id: '/$lang/hse-quality'
+      path: '/hse-quality'
+      fullPath: '/$lang/hse-quality'
+      preLoaderRoute: typeof LangHseQualityRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/industries': {
+      id: '/$lang/industries'
+      path: '/industries'
+      fullPath: '/$lang/industries'
+      preLoaderRoute: typeof LangIndustriesRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/privacy-policy': {
+      id: '/$lang/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/$lang/privacy-policy'
+      preLoaderRoute: typeof LangPrivacyPolicyRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/quote': {
@@ -188,6 +322,12 @@ declare module '@tanstack/react-router' {
 }
 
 interface LangRouteChildren {
+  LangAboutRoute: typeof LangAboutRoute
+  LangCompanyProfileRoute: typeof LangCompanyProfileRoute
+  LangContactRoute: typeof LangContactRoute
+  LangHseQualityRoute: typeof LangHseQualityRoute
+  LangIndustriesRoute: typeof LangIndustriesRoute
+  LangPrivacyPolicyRoute: typeof LangPrivacyPolicyRoute
   LangQuoteRoute: typeof LangQuoteRoute
   LangIndexRoute: typeof LangIndexRoute
   LangProjectsSlugRoute: typeof LangProjectsSlugRoute
@@ -197,6 +337,12 @@ interface LangRouteChildren {
 }
 
 const LangRouteChildren: LangRouteChildren = {
+  LangAboutRoute: LangAboutRoute,
+  LangCompanyProfileRoute: LangCompanyProfileRoute,
+  LangContactRoute: LangContactRoute,
+  LangHseQualityRoute: LangHseQualityRoute,
+  LangIndustriesRoute: LangIndustriesRoute,
+  LangPrivacyPolicyRoute: LangPrivacyPolicyRoute,
   LangQuoteRoute: LangQuoteRoute,
   LangIndexRoute: LangIndexRoute,
   LangProjectsSlugRoute: LangProjectsSlugRoute,
@@ -210,6 +356,7 @@ const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LangRoute: LangRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
