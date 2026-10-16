@@ -47,7 +47,7 @@ function schema(lang: Lang) {
   });
 }
 
-export function QuoteRequestForm({ defaultService }: { defaultService?: string }) {
+export function QuoteRequestForm({ defaultService }: { defaultService?: string | undefined }) {
   const lang = useLang();
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "noBackend" | "mailto">("idle");
