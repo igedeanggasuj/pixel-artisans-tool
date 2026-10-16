@@ -12,6 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
+import { Route as LangQuoteRouteImport } from './routes/$lang/quote'
+import { Route as LangProjectsIndexRouteImport } from './routes/$lang/projects.index'
+import { Route as LangProjectsSlugRouteImport } from './routes/$lang/projects.$slug'
+import { Route as LangServicesIndexRouteImport } from './routes/$lang/services.index'
+import { Route as LangServicesSlugRouteImport } from './routes/$lang/services.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,28 +33,92 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRoute,
 } as any)
+const LangQuoteRoute = LangQuoteRouteImport.update({
+  id: '/quote',
+  path: '/quote',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangProjectsIndexRoute = LangProjectsIndexRouteImport.update({
+  id: '/projects/',
+  path: '/projects/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangProjectsSlugRoute = LangProjectsSlugRouteImport.update({
+  id: '/projects/$slug',
+  path: '/projects/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangServicesIndexRoute = LangServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangServicesSlugRoute = LangServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/$lang/quote': typeof LangQuoteRoute
   '/$lang/': typeof LangIndexRoute
+  '/$lang/projects/$slug': typeof LangProjectsSlugRoute
+  '/$lang/services/$slug': typeof LangServicesSlugRoute
+  '/$lang/projects/': typeof LangProjectsIndexRoute
+  '/$lang/services/': typeof LangServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/quote': typeof LangQuoteRoute
   '/$lang': typeof LangIndexRoute
+  '/$lang/projects/$slug': typeof LangProjectsSlugRoute
+  '/$lang/services/$slug': typeof LangServicesSlugRoute
+  '/$lang/projects': typeof LangProjectsIndexRoute
+  '/$lang/services': typeof LangServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/$lang/quote': typeof LangQuoteRoute
   '/$lang/': typeof LangIndexRoute
+  '/$lang/projects/$slug': typeof LangProjectsSlugRoute
+  '/$lang/services/$slug': typeof LangServicesSlugRoute
+  '/$lang/projects/': typeof LangProjectsIndexRoute
+  '/$lang/services/': typeof LangServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$lang' | '/$lang/'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/$lang/quote'
+    | '/$lang/'
+    | '/$lang/projects/$slug'
+    | '/$lang/services/$slug'
+    | '/$lang/projects/'
+    | '/$lang/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$lang'
-  id: '__root__' | '/' | '/$lang' | '/$lang/'
+  to:
+    | '/'
+    | '/$lang/quote'
+    | '/$lang'
+    | '/$lang/projects/$slug'
+    | '/$lang/services/$slug'
+    | '/$lang/projects'
+    | '/$lang/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/$lang/quote'
+    | '/$lang/'
+    | '/$lang/projects/$slug'
+    | '/$lang/services/$slug'
+    | '/$lang/projects/'
+    | '/$lang/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -80,15 +149,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/quote': {
+      id: '/$lang/quote'
+      path: '/quote'
+      fullPath: '/$lang/quote'
+      preLoaderRoute: typeof LangQuoteRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/projects/': {
+      id: '/$lang/projects/'
+      path: '/projects'
+      fullPath: '/$lang/projects/'
+      preLoaderRoute: typeof LangProjectsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/projects/$slug': {
+      id: '/$lang/projects/$slug'
+      path: '/projects/$slug'
+      fullPath: '/$lang/projects/$slug'
+      preLoaderRoute: typeof LangProjectsSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/services/': {
+      id: '/$lang/services/'
+      path: '/services'
+      fullPath: '/$lang/services/'
+      preLoaderRoute: typeof LangServicesIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/services/$slug': {
+      id: '/$lang/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/$lang/services/$slug'
+      preLoaderRoute: typeof LangServicesSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
 interface LangRouteChildren {
+  LangQuoteRoute: typeof LangQuoteRoute
   LangIndexRoute: typeof LangIndexRoute
+  LangProjectsSlugRoute: typeof LangProjectsSlugRoute
+  LangServicesSlugRoute: typeof LangServicesSlugRoute
+  LangProjectsIndexRoute: typeof LangProjectsIndexRoute
+  LangServicesIndexRoute: typeof LangServicesIndexRoute
 }
 
 const LangRouteChildren: LangRouteChildren = {
+  LangQuoteRoute: LangQuoteRoute,
   LangIndexRoute: LangIndexRoute,
+  LangProjectsSlugRoute: LangProjectsSlugRoute,
+  LangServicesSlugRoute: LangServicesSlugRoute,
+  LangProjectsIndexRoute: LangProjectsIndexRoute,
+  LangServicesIndexRoute: LangServicesIndexRoute,
 }
 
 const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
