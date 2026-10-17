@@ -23,7 +23,7 @@ export const Route = createFileRoute("/$lang/services/$slug")({
       scripts: [{ type: "application/ld+json", children: JSON.stringify({
         "@context": "https://schema.org",
         "@graph": [
-          { "@type": "Service", name: s.title[l], description: s.overview[l], provider: { "@type": "Organization", name: "GANDUSTECHNO" }, areaServed: "Indonesia" },
+          { "@type": "Service", name: s.title[l], description: s.overview[l], provider: { "@type": "Organization", name: "PT. NAFAZ SANDBLASTING INDONESIA" }, areaServed: "Indonesia" },
           { "@type": "BreadcrumbList", itemListElement: [
             { "@type": "ListItem", position: 1, name: ui.nav.home[l], item: `${siteConfig.siteUrl}/${l}` },
             { "@type": "ListItem", position: 2, name: ui.nav.services[l], item: `${siteConfig.siteUrl}/${l}/services` },

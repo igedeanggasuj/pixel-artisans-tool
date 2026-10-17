@@ -6,9 +6,9 @@ export const Route = createFileRoute("/")({
   },
   head: () => ({
     meta: [
-      { title: "GANDUSTECHNO — Industrial Services & Engineering" },
+      { title: "PT. NAFAZ SANDBLASTING INDONESIA — Industrial Services & Engineering" },
       { name: "description", content: "Surface preparation, protective coating, steel fabrication, and industrial construction services." },
-      { property: "og:title", content: "GANDUSTECHNO — Industrial Services & Engineering" },
+      { property: "og:title", content: "PT. NAFAZ SANDBLASTING INDONESIA — Industrial Services & Engineering" },
       { property: "og:description", content: "Surface preparation, protective coating, steel fabrication, and industrial construction services." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

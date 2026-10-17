@@ -6,7 +6,7 @@ import { Breadcrumbs, PageHero } from "@/components/site/blocks";
 export const Route = createFileRoute("/$lang/privacy-policy")({
   head: ({ params }) => {
     const l = langOf(params);
-    return seo(l, "/privacy-policy", ui.nav.privacy[l], l === "id" ? "Bagaimana GANDUSTECHNO mengumpulkan dan menggunakan data dari formulir situs web." : "How GANDUSTECHNO collects and uses data submitted through website forms.");
+    return seo(l, "/privacy-policy", ui.nav.privacy[l], l === "id" ? "Bagaimana PT. NAFAZ SANDBLASTING INDONESIA mengumpulkan dan menggunakan data dari formulir situs web." : "How PT. NAFAZ SANDBLASTING INDONESIA collects and uses data submitted through website forms.");
   },
   component: () => {
     const lang = useLang();

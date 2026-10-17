@@ -8,7 +8,7 @@ import hero from "@/assets/svc-surface.jpg";
 export const Route = createFileRoute("/$lang/hse-quality")({
   head: ({ params }) => {
     const l = langOf(params);
-    return seo(l, "/hse-quality", ui.nav.hse[l], l === "id" ? "Pendekatan K3, lingkungan, dan pengendalian mutu GANDUSTECHNO." : "GANDUSTECHNO's approach to health, safety, environment, and quality control.");
+    return seo(l, "/hse-quality", ui.nav.hse[l], l === "id" ? "Pendekatan K3, lingkungan, dan pengendalian mutu PT. NAFAZ SANDBLASTING INDONESIA." : "PT. NAFAZ SANDBLASTING INDONESIA's approach to health, safety, environment, and quality control.");
   },
   component: Hse,
 });

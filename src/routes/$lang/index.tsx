@@ -31,14 +31,14 @@ function Home() {
       <section className="section-y">
         <div className="container-x grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="eyebrow">GANDUSTECHNO</p>
+            <p className="eyebrow">PT. NAFAZ SANDBLASTING INDONESIA</p>
             <h2 className="mt-4 text-3xl font-extrabold text-primary md:text-5xl">{lang === "id" ? "Keahlian Industri. Solusi yang Tepat." : "Industrial Expertise. Practical Solutions."}</h2>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
               {lang === "id"
-                ? "GANDUSTECHNO menyediakan layanan industri yang mencakup persiapan permukaan, perlindungan korosi, fabrikasi baja, konstruksi, dan pemeliharaan. Pendekatan pekerjaan mengutamakan kejelasan lingkup, perencanaan, pengendalian mutu, keselamatan, dan koordinasi proyek."
-                : "GANDUSTECHNO provides industrial services covering surface preparation, corrosion protection, steel fabrication, construction, and maintenance. Our approach emphasizes scope clarity, work planning, quality control, safe execution, and effective project coordination."}
+                ? "PT. NAFAZ SANDBLASTING INDONESIA menyediakan layanan industri yang mencakup persiapan permukaan, perlindungan korosi, fabrikasi baja, konstruksi, dan pemeliharaan. Pendekatan pekerjaan mengutamakan kejelasan lingkup, perencanaan, pengendalian mutu, keselamatan, dan koordinasi proyek."
+                : "PT. NAFAZ SANDBLASTING INDONESIA provides industrial services covering surface preparation, corrosion protection, steel fabrication, construction, and maintenance. Our approach emphasizes scope clarity, work planning, quality control, safe execution, and effective project coordination."}
             </p>
             <Link to="/$lang/about" params={{ lang }} className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:text-accent">{ui.cta.discover[lang]} <ArrowRight className="h-4 w-4" /></Link>
           </div>
@@ -68,7 +68,7 @@ function Home() {
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <p className="eyebrow">{lang === "id" ? "Mengapa Kami" : "Why GANDUSTECHNO"}</p>
+            <p className="eyebrow">{lang === "id" ? "Mengapa Kami" : "Why PT. NAFAZ SANDBLASTING INDONESIA"}</p>
             <h2 className="mt-4 text-3xl font-extrabold text-primary md:text-4xl">{lang === "id" ? "Mitra Andal untuk Proyek Industri" : "A Reliable Partner for Industrial Projects"}</h2>
             <img src={fabrication} alt={lang === "id" ? "Pengelasan struktur baja di workshop" : "Welding structural steel in the workshop"} loading="lazy" width={1280} height={896} className="mt-8 aspect-[4/3] w-full object-cover" />
           </div>

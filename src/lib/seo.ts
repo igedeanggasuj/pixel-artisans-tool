@@ -5,7 +5,7 @@ import type { Lang } from "@/i18n";
 export function seo(lang: Lang, path: string, title: string, description: string) {
   const base = siteConfig.siteUrl;
   const p = path === "/" ? "" : path;
-  const full = `${title} | GANDUSTECHNO`;
+  const full = `${title} | PT. NAFAZ SANDBLASTING INDONESIA`;
   return {
     meta: [
       { title: full },

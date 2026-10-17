@@ -28,7 +28,7 @@ export const ui = {
     quote: { id: "Minta Penawaran", en: "Request a Quotation" },
     explore: { id: "Jelajahi Layanan", en: "Explore Our Services" },
     contactTeam: { id: "Hubungi Tim Kami", en: "Contact Our Team" },
-    discover: { id: "Kenali GANDUSTECHNO", en: "Discover GANDUSTECHNO" },
+    discover: { id: "Kenali PT. NAFAZ SANDBLASTING INDONESIA", en: "Discover PT. NAFAZ SANDBLASTING INDONESIA" },
     viewProjects: { id: "Lihat Semua Proyek", en: "View All Projects" },
     learnMore: { id: "Selengkapnya", en: "Learn more" },
     whatsapp: { id: "WhatsApp", en: "WhatsApp" },

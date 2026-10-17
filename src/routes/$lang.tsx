@@ -15,8 +15,8 @@ export const Route = createFileRoute("/$lang")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
-            { "@type": "Organization", name: "GANDUSTECHNO", url: siteConfig.siteUrl, ...(siteConfig.contactEmail ? { email: siteConfig.contactEmail } : {}) },
-            { "@type": "WebSite", name: "GANDUSTECHNO", url: siteConfig.siteUrl, inLanguage: ["id", "en"] },
+            { "@type": "Organization", name: "PT. NAFAZ SANDBLASTING INDONESIA", url: siteConfig.siteUrl, ...(siteConfig.contactEmail ? { email: siteConfig.contactEmail } : {}) },
+            { "@type": "WebSite", name: "PT. NAFAZ SANDBLASTING INDONESIA", url: siteConfig.siteUrl, inLanguage: ["id", "en"] },
           ],
         }),
       },

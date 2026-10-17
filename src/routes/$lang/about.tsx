@@ -10,7 +10,7 @@ import hero from "@/assets/svc-fabrication.jpg";
 export const Route = createFileRoute("/$lang/about")({
   head: ({ params }) => {
     const l = langOf(params);
-    return seo(l, "/about", ui.nav.about[l], l === "id" ? "Profil perusahaan GANDUSTECHNO: lingkup bisnis, nilai, pendekatan operasional, serta komitmen K3 dan mutu." : "GANDUSTECHNO company profile: business scope, values, operational approach, and HSE and quality commitment.");
+    return seo(l, "/about", ui.nav.about[l], l === "id" ? "Profil perusahaan PT. NAFAZ SANDBLASTING INDONESIA: lingkup bisnis, nilai, pendekatan operasional, serta komitmen K3 dan mutu." : "PT. NAFAZ SANDBLASTING INDONESIA company profile: business scope, values, operational approach, and HSE and quality commitment.");
   },
   component: About,
 });
@@ -41,7 +41,7 @@ function About() {
         <div className="container-x grid gap-12 md:grid-cols-12">
           <h2 className="text-3xl font-extrabold text-primary md:col-span-4">{id ? "Ikhtisar Perusahaan" : "Company Overview"}</h2>
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-7 md:col-start-6">
-            <p>{id ? "GANDUSTECHNO menyediakan layanan industri yang mencakup persiapan permukaan, perlindungan korosi, fabrikasi baja, konstruksi, dan pemeliharaan." : "GANDUSTECHNO provides industrial services covering surface preparation, corrosion protection, steel fabrication, construction, and maintenance."}</p>
+            <p>{id ? "PT. NAFAZ SANDBLASTING INDONESIA menyediakan layanan industri yang mencakup persiapan permukaan, perlindungan korosi, fabrikasi baja, konstruksi, dan pemeliharaan." : "PT. NAFAZ SANDBLASTING INDONESIA provides industrial services covering surface preparation, corrosion protection, steel fabrication, construction, and maintenance."}</p>
             <p>{id ? "Pendekatan kami mengutamakan kejelasan lingkup, perencanaan kerja, pengendalian mutu, pelaksanaan yang aman, dan koordinasi proyek yang efektif." : "Our approach emphasizes scope clarity, work planning, quality control, safe execution, and effective project coordination."}</p>
           </div>
         </div>

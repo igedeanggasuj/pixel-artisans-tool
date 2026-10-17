@@ -2,7 +2,8 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 import { ui, useLang, type Lang } from "@/i18n";
-import { whatsappLink } from "@/config/site";
+import { siteConfig, whatsappLink } from "@/config/site";
+import logo from "@/assets/logo-nafaz.png";
 
 const items = [
   { to: "/$lang", key: "home" },
@@ -37,9 +38,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="container-x flex h-18 items-center justify-between gap-6 py-4">
-        <Link to="/$lang" params={{ lang }} className="flex items-center gap-2.5" aria-label="GANDUSTECHNO">
-          <span className="grid h-8 w-8 place-items-center bg-primary font-display text-sm font-extrabold text-primary-foreground">G</span>
-          <span className="font-display text-lg font-extrabold tracking-tight text-primary">GANDUS<span className="text-accent">TECHNO</span></span>
+        <Link to="/$lang" params={{ lang }} className="flex items-center" aria-label={siteConfig.brand}>
+          <img src={logo} alt={siteConfig.brand} width={547} height={203} className="h-11 w-auto" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {items.map((it) => (

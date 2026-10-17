@@ -14,7 +14,7 @@ export const Route = createFileRoute("/$lang/projects/")({
   head: ({ params }) => {
     const l = langOf(params);
     return seo(l, "/projects", l === "id" ? "Portofolio Proyek" : "Project Portfolio",
-      l === "id" ? "Portofolio proyek surface preparation, coating, fabrikasi baja, dan konstruksi industri GANDUSTECHNO." : "GANDUSTECHNO project portfolio for surface preparation, coating, steel fabrication, and industrial construction.");
+      l === "id" ? "Portofolio proyek surface preparation, coating, fabrikasi baja, dan konstruksi industri PT. NAFAZ SANDBLASTING INDONESIA." : "PT. NAFAZ SANDBLASTING INDONESIA project portfolio for surface preparation, coating, steel fabrication, and industrial construction.");
   },
   component: ProjectsPage,
 });

@@ -9,7 +9,7 @@ import hero from "@/assets/svc-construction.jpg";
 export const Route = createFileRoute("/$lang/contact")({
   head: ({ params }) => {
     const l = langOf(params);
-    return seo(l, "/contact", ui.nav.contact[l], l === "id" ? "Hubungi GANDUSTECHNO melalui email, WhatsApp, atau formulir permintaan." : "Contact GANDUSTECHNO by email, WhatsApp, or the inquiry form.");
+    return seo(l, "/contact", ui.nav.contact[l], l === "id" ? "Hubungi PT. NAFAZ SANDBLASTING INDONESIA melalui email, WhatsApp, atau formulir permintaan." : "Contact PT. NAFAZ SANDBLASTING INDONESIA by email, WhatsApp, or the inquiry form.");
   },
   component: Contact,
 });

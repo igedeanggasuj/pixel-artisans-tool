@@ -3,7 +3,7 @@
  * Components show setup notices while a value is null — never fake data.
  */
 export const siteConfig = {
-  brand: "GANDUSTECHNO",
+  brand: "PT. NAFAZ SANDBLASTING INDONESIA",
   siteUrl: "https://id-preview--987b7029-d0d3-448f-89c5-930a858a0721.lovable.app",
   legalName: null as string | null,
   yearEstablished: null as string | null,
@@ -27,7 +27,7 @@ export function whatsappLink(lang: "id" | "en", service?: string): string | null
   const s = service ?? (lang === "id" ? "[nama layanan]" : "[service name]");
   const msg =
     lang === "id"
-      ? `Halo GANDUSTECHNO, saya ingin berkonsultasi mengenai kebutuhan proyek industri. Layanan yang saya butuhkan adalah ${s}. Mohon informasi lebih lanjut.`
-      : `Hello GANDUSTECHNO, I would like to discuss an industrial project. The service I am interested in is ${s}. Please provide further information.`;
+      ? `Halo PT. NAFAZ SANDBLASTING INDONESIA, saya ingin berkonsultasi mengenai kebutuhan proyek industri. Layanan yang saya butuhkan adalah ${s}. Mohon informasi lebih lanjut.`
+      : `Hello PT. NAFAZ SANDBLASTING INDONESIA, I would like to discuss an industrial project. The service I am interested in is ${s}. Please provide further information.`;
   return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(msg)}`;
 }

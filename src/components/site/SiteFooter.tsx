@@ -12,7 +12,7 @@ export function SiteFooter() {
     <footer className="bg-navy text-on-dark">
       <div className="container-x grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-4">
-          <p className="font-display text-xl font-extrabold">GANDUS<span className="text-accent">TECHNO</span></p>
+          <p className="font-display text-xl font-extrabold">PT. NAFAZ <span className="text-accent">SANDBLASTING</span> INDONESIA</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-on-dark-muted">{ui.positioning[lang]}</p>
           <div className="mt-6"><LanguageSwitcher dark /></div>
         </div>
@@ -46,7 +46,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-line-dark">
         <div className="container-x flex flex-col justify-between gap-2 py-6 text-xs text-on-dark-muted md:flex-row">
-          <p>© {new Date().getFullYear()} GANDUSTECHNO</p>
+          <p>© {new Date().getFullYear()} PT. NAFAZ SANDBLASTING INDONESIA</p>
           <Link to="/$lang/privacy-policy" params={{ lang }} className="hover:text-on-dark">{ui.nav.privacy[lang]}</Link>
         </div>
       </div>
