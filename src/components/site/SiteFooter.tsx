@@ -38,7 +38,7 @@ export function SiteFooter() {
           <p className="text-xs font-bold uppercase tracking-widest text-accent">{ui.nav.contact[lang]}</p>
           <ul className="mt-4 space-y-2.5 text-sm text-on-dark-muted">
             <li>Email: {siteConfig.contactEmail ? <a href={`mailto:${siteConfig.contactEmail}`} className="hover:text-on-dark">{siteConfig.contactEmail}</a> : <em>{pending}</em>}</li>
-            <li>WhatsApp: {wa ? <a href={wa} target="_blank" rel="noopener noreferrer" className="hover:text-on-dark">{lang === "id" ? "Chat sekarang" : "Chat now"}</a> : <em>{pending}</em>}</li>
+            <li>WhatsApp: {wa ? <a href={wa} target="_blank" rel="noopener noreferrer" className="hover:text-on-dark">{siteConfig.phone ?? (lang === "id" ? "Chat sekarang" : "Chat now")}</a> : <em>{pending}</em>}</li>
             <li>{lang === "id" ? "Alamat" : "Address"}: {siteConfig.address ?? <em>{pending}</em>}</li>
           </ul>
           <Link to="/$lang/quote" params={{ lang }} className="btn btn-accent mt-6">{ui.cta.quote[lang]}</Link>

@@ -7,11 +7,11 @@ export const siteConfig = {
   siteUrl: "https://id-preview--987b7029-d0d3-448f-89c5-930a858a0721.lovable.app",
   legalName: null as string | null,
   yearEstablished: null as string | null,
-  address: null as string | null,
+  address: "Jalan Mutiara Raya No. 78, Suci, Gresik 61151" as string | null,
   /** International format, digits only, e.g. "6281234567890" */
-  whatsappNumber: null as string | null,
-  contactEmail: null as string | null,
-  phone: null as string | null,
+  whatsappNumber: "6281556816780" as string | null,
+  contactEmail: "nafazblastingindonesia@nafaz-bi.com" as string | null,
+  phone: "+62 815 5681 6780" as string | null,
   operatingHours: null as { id: string; en: string } | null,
   registration: null as string | null,
   /** URL to the official company profile PDF */
