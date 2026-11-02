@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   brand: "PT. NAFAZ SANDBLASTING INDONESIA",
-  siteUrl: "https://id-preview--987b7029-d0d3-448f-89c5-930a858a0721.lovable.app",
+  siteUrl: "https://pixel-artisans-tool.lovable.app",
   legalName: null as string | null,
   yearEstablished: null as string | null,
   address: "Jalan Mutiara Raya No. 78, Suci, Gresik 61151" as string | null,
