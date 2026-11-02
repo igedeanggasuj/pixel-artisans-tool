@@ -38,7 +38,12 @@ function ProjectDetail() {
     <>
       <PageHero image={p.cover} eyebrow={ui.nav.projects[lang]} title={p.title[lang]} intro={p.description[lang]}>
         <Breadcrumbs items={[{ label: ui.nav.home[lang], to: "/$lang", params: { lang } }, { label: ui.nav.projects[lang], to: "/$lang/projects", params: { lang } }, { label: p.title[lang] }]} />
-        {p.sample && <div className="mb-4"><SampleBadge /></div>}
+        {p.sample && (
+          <div className="mb-4 max-w-2xl space-y-2">
+            <SampleBadge />
+            <p className="text-sm opacity-90">{id ? "Halaman ini adalah ilustrasi tata letak, bukan proyek yang telah diselesaikan. Klien, lokasi, tahun, dan foto bersifat contoh." : "This page illustrates the layout only and is not a completed project. Client, location, year and photos are placeholders."}</p>
+          </div>
+        )}
       </PageHero>
       <section className="section-y">
         <div className="container-x grid gap-16 lg:grid-cols-12">
